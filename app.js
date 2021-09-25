@@ -19,11 +19,13 @@ console.log(ramdomNumber);
 // on click event of bottom ->
 bottom.addEventListener('click', function () {
   // get input value from input dom
-  const userInputVal = parseInt(userInput.value);
+  let userInputVal = userInput.value;
   if (userInputVal === '') {
     alert('please insert valid number 1 - 6');
     return;
   }
+
+  userInputVal = parseInt(userInputVal);
 
   if (userInputVal === ramdomNumber) {
     alert('You got it !!!');
@@ -31,7 +33,5 @@ bottom.addEventListener('click', function () {
   }
 
   // compare the value between user-iput and ramdom
-    userInputVal < ramdomNumber
-        ? alert('greater !!')
-        : alert('smaller !!');
+  userInputVal < ramdomNumber ? alert('greater !!') : alert('smaller !!');
 });
