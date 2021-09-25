@@ -15,10 +15,23 @@ const bottom = document.getElementById('btn');
 // generate random nubmer 1 - 6
 const ramdomNumber = generateRamdomNumber(6);
 
-console.log(userInput, bottom, ramdomNumber);
+console.log(ramdomNumber);
 // on click event of bottom ->
-// get input value from input dom
+bottom.addEventListener('click', function () {
+  // get input value from input dom
+  const userInputVal = parseInt(userInput.value);
+  if (userInputVal === '') {
+    alert('please insert valid number 1 - 6');
+    return;
+  }
 
-// compare the value between user-iput and ramdom
+  if (userInputVal === ramdomNumber) {
+    alert('You got it !!!');
+    return;
+  }
 
-// repsond to user
+  // compare the value between user-iput and ramdom
+    userInputVal < ramdomNumber
+        ? alert('greater !!')
+        : alert('smaller !!');
+});
