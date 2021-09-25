@@ -1,0 +1,17 @@
+#user-input {
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+#btn {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: pink;
+}
+
+#btn:hover {
+  background: orange;
+}
