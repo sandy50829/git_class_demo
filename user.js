@@ -1,3 +1,0 @@
-function userInfo(){
-    return "userInfo"
-}
